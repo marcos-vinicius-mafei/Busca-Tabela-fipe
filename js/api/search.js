@@ -50,7 +50,11 @@ function selecionaModelo() {
         .then(res => res.json())
         .then(resposta => resposta.forEach(function (element) {
             const option = document.createElement('option')
-            option.innerText = element.nome
+            if(element.nome.includes(32000)){
+                option.innerText = "0 km"
+            }else{
+                option.innerText = element.nome
+            }
             option.value = element.codigo
             ano.appendChild(option)
         }))
