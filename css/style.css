@@ -1,4 +1,4 @@
-html{
+html {
     height: 100%;
 }
 
@@ -7,6 +7,7 @@ body {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     --mainColor: #a9a8ad;
+    padding: 0px;
 }
 
 .none {
@@ -15,11 +16,7 @@ body {
 
 header {
     padding: 12px 7px 6px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--mainColor);
-    gap: 20px;
     border-bottom: 2px solid #000000;
 }
 
@@ -34,10 +31,20 @@ header h2 {
     text-align: center;
 }
 
-div.container{
+.container--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    max-width:500px;
+    margin: auto;
+}
+
+div.container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height:100%;
 }
 
 section {
@@ -56,6 +63,21 @@ section form {
     gap: 8px;
     align-items: center;
     font-size: 16px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    background-color: #444141;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    width: 250px;
 }
 
 section form select {
@@ -90,6 +112,16 @@ section div.modal {
     margin-bottom: 50px;
 }
 
+section div.modal .modal--info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+section div.modal .modal--image{
+    align-self: center;
+}
+
 section div.modal h2 {
     font-size: 18px;
     font-weight: bold;
@@ -112,14 +144,11 @@ section div.modal img.image {
     border: 1px solid #000;
     width: 250px;
     height: 180px;
-    align-self: center;
 }
 
 footer {
     width: 100%;
-    position: fixed;
-    transform: translateY(1405%);
-    padding: 2px;
+    padding: 10px;
     border-top: 2px solid #000;
     height: 40px;
     color: var(--mainColor);
@@ -129,5 +158,78 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 6px;
     justify-self: flex-end;
+}
+
+@media screen and (min-width: 700px) {
+    section form {
+        width: 500px;
+        gap: 10px;
+    }
+
+    .forms {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 400px;
+    }
+
+    section div.modal {
+        width: 500px;
+    }
+
+    section div.modal img.image {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    section {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 40px 10px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 50px;
+    }
+
+    section form {
+        width: 500px;
+        gap: 30px;
+    }
+
+    section div.modal img.image {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1520px){
+    section form {
+        width: 700px;
+        gap: 41px;
+    }
+    section div.modal {
+        width: 800px;
+        gap: 20px;
+    }
+
+    section div.modal{
+        flex-direction: row;
+        width: 700px;
+    }
+
+    section div.modal .modal--info{
+        gap: 30px;
+    }
+
+    section div.modal h2{
+        margin-bottom: 10px;
+    }
+
+    section div.modal img.image {
+        width: 350px;
+        height: 300px;
+    }
 }

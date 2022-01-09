@@ -13,34 +13,46 @@
 </head>
 <body>
     <header>
-        <figure>
-            <img src="images/logo1.png" alt="logo1" class="img1">
-            <figcaption>logo imagem 1</figcaption>
-        </figure>
-        <h2>Busca Tabela Fipe</h2>
-        <figure>
-            <img src="images/logo2.png" alt="logo2">
-            <figcaption>logo imagem 2</figcaption>
-        </figure>
+        <div class="container--header">
+            <figure>
+                <img src="images/logo1.png" alt="logo1" class="img1">
+                <figcaption>logo imagem 1</figcaption>
+            </figure>
+            <h2>Busca Tabela Fipe</h2>
+            <figure>
+                <img src="images/logo2.png" alt="logo2">
+                <figcaption>logo imagem 2</figcaption>
+            </figure>
+        </div>
     </header>
     <div class="container">
         <section class="content">
             <form action="#">
-                <label for="tipo">Selecione o tipo do veículo</label>
-                <select name="tipo" id="tipos">
-                    <option value="carros">carro</option>
-                    <option value="motos">moto</option>
-                    <option value="caminhoes">caminhão</option>
-                </select>
-                <label for="marca">Selecione a marca do veículo</label>
-                <select name="marca" id="marcas"></select>
-                <label for="modelo">Selecione o modelo do veículo</label>
-                <select name="modelo" id="modelos"></select>
-                <label for="ano">Selecione o ano do veículo</label>
-                <select name="ano" id="ano"></select>
+                <div class="forms">
+                    <label for="tipo">Selecione o tipo do veículo</label>
+                    <select name="tipo" id="tipos">
+                        <option value="carros">carro</option>
+                        <option value="motos">moto</option>
+                        <option value="caminhoes">caminhão</option>
+                    </select>
+                </div>
+                <div class="forms">
+                    <label for="marca">Selecione a marca do veículo</label>
+                    <select name="marca" id="marcas"></select>
+                </div>
+                <div class="forms">
+                    <label for="modelo">Selecione o modelo do veículo</label>
+                    <select name="modelo" id="modelos"></select>  
+                </div>
+                <div class="forms">
+                    <label for="ano">Selecione o ano do veículo</label>
+                    <select name="ano" id="ano"></select>
+                </div>
                 <button id="btn">Pesquisar</button>
             </form>
             <div class="modal none">
+                <div class="modal--info"></div>
+                <div class="modal--image"></div>
             </div>
         </section>
         <footer>

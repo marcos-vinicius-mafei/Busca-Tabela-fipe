@@ -4,6 +4,8 @@ const marca = document.querySelector('#marcas')
 const modelo = document.querySelector('#modelos')
 const ano = document.querySelector('#ano')
 const modal = document.querySelector('.modal')
+const modalInfo = document.querySelector('.modal--info')
+const modalImage = document.querySelector('.modal--image')
 const button = document.querySelector('#btn')
 
 let padrao = `https://parallelum.com.br/fipe/api/v1/${tipo.value}/marcas`
@@ -57,7 +59,8 @@ function selecionaModelo() {
 function montaModal(e) {
     e.preventDefault()
     modal.classList.add('none')
-    modal.innerHTML = ''
+    modalInfo.innerHTML = ''
+    modalImage.innerHTML=''
     currentCode = `/${ano.value}`
     let atual = padrao + currentModel + currentYear + currentCode
     fetch(atual)
@@ -82,12 +85,12 @@ function montaModal(e) {
             mes.innerText = `Mês de referência: ${MesReferencia}`
             const valor = document.createElement('h3')
             valor.innerText = `Valor do veículo: ${Valor}`
-            modal.appendChild(h2)
-            modal.appendChild(title)
-            modal.appendChild(anoVeiculo)
-            modal.appendChild(combustivel)
-            modal.appendChild(mes)
-            modal.appendChild(valor)
+            modalInfo.appendChild(h2)
+            modalInfo.appendChild(title)
+            modalInfo.appendChild(anoVeiculo)
+            modalInfo.appendChild(combustivel)
+            modalInfo.appendChild(mes)
+            modalInfo.appendChild(valor)
             modal.classList.remove('none')
             fetch(`https://bing-image-search1.p.rapidapi.com/images/search?q=${Marca}%20${simpleModel}%20${AnoModelo}&count=2`, {
                 "method": "GET",
@@ -103,7 +106,7 @@ function montaModal(e) {
                     vehicleImg.src = url
                     vehicleImg.alt = 'Imagem do veículo'
                     vehicleImg.classList.add('image')
-                    modal.appendChild(vehicleImg)
+                    modalImage.appendChild(vehicleImg)
                 })
                 .catch(err => {
                     console.error(err);
