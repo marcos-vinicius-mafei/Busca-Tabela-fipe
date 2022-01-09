@@ -99,7 +99,7 @@ function montaModal(e) {
             })
                 .then(resposta=>resposta.json())
                 .then(res=>{
-                    const url = res.value[0].contentUrl
+                    const url = res.value[1].contentUrl
                     const vehicleImg = document.createElement('img')
                     vehicleImg.src = url
                     vehicleImg.classList.add('image')
