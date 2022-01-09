@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Busca Tabela Fipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="images/logo1.png" alt="logo1" class="img1">
+            <figcaption>logo imagem 1</figcaption>
+        </figure>
+        <h2>Busca Tabela Fipe</h2>
+        <figure>
+            <img src="images/logo2.png" alt="logo2">
+            <figcaption>logo imagem 2</figcaption>
+        </figure>
+    </header>
+    <section class="content">
+        <form action="#">
+            <label for="tipo">Selecione o tipo do veículo</label>
+            <select name="tipo" id="tipos">
+                <option value="carros">carro</option>
+                <option value="motos">moto</option>
+                <option value="caminhoes">caminhão</option>
+            </select>
+            <label for="marca">Selecione a marca do veículo</label>
+            <select name="marca" id="marcas"></select>
+            <label for="modelo">Selecione o modelo do veículo</label>
+            <select name="modelo" id="modelos"></select>
+            <label for="ano">Selecione o ano do veículo</label>
+            <select name="ano" id="ano"></select>
+            <button id="btn">Pesquisar</button>
+        </form>
+        <div class="modal none">
+        </div>
+    </section>
+    <footer>
+        <div class="rights">
+            <span>Project by Marcos Vinícius Mafei Machado</span>
+            <span>2021-2022</span>
+        </div>
+    </footer>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    --mainColor: #a9a8ad
+}
+
+.none{
+    display: none !important;
+}
+
+header {
+    padding: 12px 7px 6px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mainColor);
+    gap: 20px;
+    border-bottom: 2px solid #000000;
+}
+
+header figure img {
+    width: 80px;
+    height: 50px;
+}
+
+header h2 {
+    font-family: 'Righteous', cursive;
+    font-size: 18px;
+    text-align: center;
+}
+
+section {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+    font-size: 16px;
+}
+
+section form select {
+    background-color: var(--mainColor);
+    text-align: center;
+    width: 150px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+section form button {
+    margin-top: 10px;
+    background-color: var(--mainColor);
+    width: 100px;
+    height: 28px;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    border-radius: 20px;
+    font-family: 'Righteous', cursive;
+}
+
+section div.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 14px;
+    background-color: var(--mainColor);
+    border: 1px solid #000;
+    padding: 12px;
+}
+
+section div.modal h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section div.modal h3 {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+section div.modal span {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+
+section div.modal img.image {
+    border: 1px solid #000;
+    width: 250px;
+    height: 180px;
+    align-self: center;
+}
