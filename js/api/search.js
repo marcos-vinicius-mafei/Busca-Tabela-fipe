@@ -67,16 +67,15 @@ function montaModal(e) {
             const h2 = document.createElement('h2')
             h2.innerText = 'Resultados da pesquisa:'
             const title = document.createElement('h3')
-            const simpleModel = Modelo.split(' ').slice(0,4).join(' ')
+            const simpleModel = Modelo.split(' ').slice(0, 4).join(' ').replace('-','').replace('/','')
             title.innerText = `${Marca} ${simpleModel}`
             const anoVeiculo = document.createElement('span')
-            console.log(AnoModelo)
-            if(AnoModelo === 32000){
+            if (AnoModelo === 32000) {
                 anoVeiculo.innerText = `Ano do veículo: ${MesReferencia.split(' ')[2]}`
-            }else{
+            } else {
                 anoVeiculo.innerText = `Ano do veículo: ${AnoModelo}`
             }
-            
+
             const combustivel = document.createElement('span')
             combustivel.innerText = `Combustível do veículo: ${Combustivel}`
             const mes = document.createElement('span')
@@ -97,11 +96,12 @@ function montaModal(e) {
                     "x-rapidapi-key": "cd4930c49amsh639ca7544311196p10bf98jsn0bcb8e71d893"
                 }
             })
-                .then(resposta=>resposta.json())
-                .then(res=>{
-                    const url = res.value[1].contentUrl
+                .then(resposta => resposta.json())
+                .then(res => {
+                    const url = res.value[0].contentUrl
                     const vehicleImg = document.createElement('img')
                     vehicleImg.src = url
+                    vehicleImg.alt = 'Imagem do veículo'
                     vehicleImg.classList.add('image')
                     modal.appendChild(vehicleImg)
                 })

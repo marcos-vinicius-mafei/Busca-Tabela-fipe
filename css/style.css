@@ -1,10 +1,10 @@
 body {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
-    --mainColor: #a9a8ad
+    --mainColor: #a9a8ad;
 }
 
-.none{
+.none {
     display: none !important;
 }
 
@@ -101,4 +101,16 @@ section div.modal img.image {
     width: 250px;
     height: 180px;
     align-self: center;
+}
+
+footer {
+    border-top: 2px solid #000;
+    height: 35px;
+    color: var(--mainColor);
+    margin-top: 20px;
+    background-color: #444141;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
