@@ -3,7 +3,7 @@ import{tipo,marca,modelo,button,selecionaTipo,selecionaMarca,selecionaModelo,mon
 
 selecionaTipo()
 
-tipo.addEventListener('click', selecionaTipo)
-marca.addEventListener('click', selecionaMarca)
-modelo.addEventListener('click', selecionaModelo)
+tipo.addEventListener('blur', selecionaTipo)
+marca.addEventListener('blur', selecionaMarca)
+modelo.addEventListener('blur', selecionaModelo)
 button.addEventListener('click', montaModal)
