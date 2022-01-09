@@ -71,9 +71,9 @@ function montaModal(e) {
             title.innerText = `${Marca} ${simpleModel}`
             const anoVeiculo = document.createElement('span')
             if (AnoModelo === 32000) {
-                anoVeiculo.innerText = `Ano do veículo: ${MesReferencia.split(' ')[2]}`
+                anoVeiculo.innerText = `Ano modelo: ${MesReferencia.split(' ')[2]}`
             } else {
-                anoVeiculo.innerText = `Ano do veículo: ${AnoModelo}`
+                anoVeiculo.innerText = `Ano modelo: ${AnoModelo}`
             }
 
             const combustivel = document.createElement('span')
